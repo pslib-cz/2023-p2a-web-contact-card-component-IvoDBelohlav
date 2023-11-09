@@ -1,0 +1,83 @@
+@layer init, design;
+
+:root {
+    --main-bg: hsl(200, 20%, 87%);
+    --card-bg: hsl(200, 20%, 97%);
+    --card-shadow: rgb(128, 128, 128);
+    --card-font: black;
+}
+
+@layer init {
+    .content-wrapper {
+        max-width: 1150px;
+        margin: 0 auto;
+        text-align: center;
+        border-left: 5px solid var(--card-bg);
+        border-right: 5px solid var(--card-bg);
+
+        background-image: url(../img/bg.webp);
+        background-size: cover;
+        background-position: center;
+
+        background-color: var(--main-bg);
+        box-shadow: 0 0 0 100vmax var(--main-bg);
+        clip-path: inset(0 -100vmax);
+    }
+    .content-wrapper > * {
+        text-align: initial;
+    }
+    .card p {
+        margin: .7em 0;
+        font-style: normal;
+    }
+}
+
+@layer design {
+    .icon {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.66em;
+        vertical-align: middle;
+        margin-right: .25em;
+    }
+    
+    .icon--important {
+        color: rgb(160, 80, 80);
+    }
+
+    .img-responsive {
+        width: 100%;
+    }
+
+    .card {
+        background-color: var(--card-bg);
+        width: 18em;
+        display: inline-block;
+        margin: .5em;
+        margin-top: 6em;
+        box-shadow: .5em .25em .5em var(--card-shadow);
+    }
+    .card__header {
+        width: 10em;
+        height: 10em;
+        border-radius: 100%;
+        overflow: hidden;
+        margin: auto;
+        margin-top: -5em;
+        border: .15em solid white;
+        box-shadow: 0em 0em .3em var(--card-shadow);
+    }
+
+    .card__body {
+        padding: 1em;
+    }
+
+    .card__heading {
+        font-size: 1.15em;
+        margin: 0;
+        margin-bottom: 1em;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid black;
+    }
+}
